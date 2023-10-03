@@ -101,7 +101,9 @@ $dataSubjects= $query->fetchAll(PDO::FETCH_ASSOC);
                                                         <?php
                                                             for($i=65;$i<=73;$i++) {
                                                                 $p = 1;
-                                                                while($p<=2) {
+                                                                $maxSections = 2;
+                                                                if($i==65 || $i==66) { $maxSections = 3; }
+                                                                while($p<=$maxSections) {
                                                                     ?>
                                                                     <option value="<?php echo $i-64; ?>-<?php echo $p; ?>"
                                                                     <?php if(isset($_GET['section'])) { if(  $_GET['section']==(($i-64)."-".$p) ) {echo "selected";} } ?>

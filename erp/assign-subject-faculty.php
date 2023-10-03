@@ -155,7 +155,9 @@ if(isset($_GET['batch']) && isset($_GET['section']) && isset($_GET['subject'])) 
                                                         <?php
                                                             for($i=65;$i<=73;$i++) {
                                                                 $p = 1;
-                                                                while($p<=2) {
+                                                                $maxSections = 2;
+                                                                if($i==65 || $i==66) { $maxSections = 3; }
+                                                                while($p<=$maxSections) {
                                                                     ?>
                                                                     <option value="<?php echo $i-64; ?>-<?php echo $p; ?>"
                                                                     <?php if(isset($_GET['section'])) { if(gettype(array_search((($i-64)."-".$p), $_GET['section']))=="integer") {echo "selected";} } ?>
