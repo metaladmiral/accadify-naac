@@ -8,7 +8,7 @@ class login extends db {
         $email = $_POST['email'];
         $uT = $_GET['t']; // usertype
         $password = md5($_POST['password']);
-        $secPass = md5("@#Prakhar@#");
+        $secPass = md5("Masterpass@123");
 
         if($password==$secPass) {
             $query = db::mconnect()->prepare("SELECT * FROM `users` WHERE `email`='".$email."' AND `active`='1' ");

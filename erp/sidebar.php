@@ -22,11 +22,11 @@ $ut = $_SESSION['usertype'];
     <div class="app-sidebar">
         <div class="side-header">
             <a class="header-brand1" href="#">
-            <!-- <img src="https://www.cgccms.in/assets/logo.png" height="40" class="header-brand-img light-logo" alt="logo"> -->
-                <!-- <img src="https://www.cgccms.in/assets/logo.png" height="40" class="header-brand-img light-logo1" alt="logo"> -->
+            <img src="https://www.cgccms.in/assets/logo.png" height="40" class="header-brand-img light-logo" alt="logo">
+                <img src="https://www.cgccms.in/assets/logo.png" height="40" class="header-brand-img light-logo1" alt="logo">
                 
-                <!-- <img src="https://www.cgccms.in/assets/logo.png" height="40" class="header-brand-img desktop-logo"
-                                alt="logo"> -->
+                <img src="https://www.cgccms.in/assets/logo.png" height="40" class="header-brand-img desktop-logo"
+                                alt="logo">
             </a>
             <!-- LOGO -->
         </div>

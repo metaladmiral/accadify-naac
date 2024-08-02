@@ -3,7 +3,12 @@ session_start();
 require_once 'conn.php';
 $conn = new Db;
 
-$sql = $conn->mconnect()->prepare("SELECT id FROM `users`");
+if(!isset($_SESSION['uid'])) {
+    header('Location: ../login/');
+
+}
+
+$sql = $conn->mconnect()->prepare("SELECT id FROM `users` where uid!='superadmin123123' ");
 $sql->execute();
 $totalUsers = $sql->rowCount();
 
@@ -80,6 +85,7 @@ foreach ($facultyInfo as $key => $value) {
     <title>ERP</title>
     <!-- BOOTSTRAP CSS -->
     <link id="style" href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <!-- STYLE CSS -->
      <link href="../assets/css/style.css" rel="stylesheet">
 	<!-- Plugins CSS -->
@@ -128,7 +134,7 @@ foreach ($facultyInfo as $key => $value) {
                                         <div class="d-flex">
                                             <div class="text-white">
                                                 <h2 class="mb-0 number-font"><?php echo $totalUsers; ?></h2>
-                                                <p class="text-white mb-0">Teachers</p>
+                                                <p class="text-white mb-0">Faculties</p>
                                             </div>
                                             <div class="ms-auto"> <i class="fa fa-user-o text-white fs-30 me-2 mt-2"></i> </div>
                                         </div>
@@ -365,7 +371,7 @@ foreach ($facultyInfo as $key => $value) {
     <!-- BACK-TO-TOP -->
     <a href="#top" id="back-to-top"><i class="fa fa-angle-up"></i></a>
     <!-- JQUERY JS -->
-    <script src="../assets/js/jquery.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script> -->
     <!-- BOOTSTRAP JS -->
     <script src="../assets/plugins/bootstrap/js/popper.min.js"></script>
     <script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>

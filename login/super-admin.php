@@ -35,10 +35,9 @@ else {
     <link href="../assets/css/icons.css" rel="stylesheet">
     <!-- INTERNAL Switcher css -->
     <link href="../assets/switcher/css/switcher.css" rel="stylesheet">
-    <!-- <script src="../assets/js/jquery.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     
     <link href="../assets/switcher/demo.css" rel="stylesheet">
-    <script src="../assets/js/jquery.min.js"></script>
     <script src="../assets/plugins/sweet-alert/sweetalert.min.js"></script>
     <script src="../assets/js/sweet-alert.js"></script>
 </head>
@@ -113,8 +112,6 @@ else {
     <!-- BACKGROUND-IMAGE CLOSED -->
 
     <!-- JQUERY JS -->
-    <script src="../assets/js/jquery.min.js"></script>
-
     <!-- BOOTSTRAP JS -->
     <script src="../assets/plugins/bootstrap/js/popper.min.js"></script>
     <script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>

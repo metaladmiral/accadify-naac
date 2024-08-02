@@ -129,13 +129,13 @@ if($_SESSION['lockscreen']=="1") {
                                             </a>
                                         </div>
                                         <!-- FULL-SCREEN -->
-                                        <div class="dropdown  d-flex notifications">
+                                        <div class="dropdown d-flex notifications" >
                                             <!-- <a class="nav-link icon" data-bs-toggle="dropdown"><i
                                                     class="fe fe-bell"></i><span class=" pulse"></span>
                                             </a> -->
-                                            <a class="nav-link icon" href="notification.php"><i
+                                            <!-- <a class="nav-link icon" href="notification.php"><i
                                                     class="fe fe-bell"></i><span class=" pulse"></span>
-                                            </a>
+                                            </a> -->
                                             <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
                                                 <div class="drop-heading border-bottom">
                                                     <div class="d-flex">
@@ -195,12 +195,12 @@ if($_SESSION['lockscreen']=="1") {
                                         <!-- MESSAGE-BOX -->
                                         
                                         <!-- SIDE-MENU -->
-                                        <div class="dropdown d-flex profile-1">
+                                        <div class="dropdown d-flex profile-1" >
                                             <a href="javascript:void(0)" data-bs-toggle="dropdown" class="nav-link leading-none d-flex">
                                                 <img src="../assets/profilepics/<?php echo $profilepic; ?>" alt="profile-user" style='object-fit:cover;'
                                                     class="avatar  profile-user brround cover-image">
                                             </a>
-                                            <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                                            <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow" style="inset-inline-start: unset;position:absolute;right:0px;">
                                                 <div class="drop-heading">
                                                     <div class="text-center">
                                                     <h5 class="text-dark mb-0 fs-14 fw-semibold"><?php echo $_SESSION['fullname']; ?></h5>
