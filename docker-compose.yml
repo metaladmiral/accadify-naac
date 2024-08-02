@@ -1,5 +1,3 @@
-version: "3.10"
-name: project
 services:
   php:
     build:
